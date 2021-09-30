@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/vendor/autoload.php';
+
+use LegoCue\Framework\Application;
+use Commands\Console;
+
+$app = new Application();
+
+$app->loadCommands( new Console() );
+$app->terminate();
