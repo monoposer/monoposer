@@ -1,6 +1,6 @@
 {
-    "name": "monoposer/framework",
-    "description": "a monorepo tool   of framework",
+    "name": "monoposer/monoposer",
+    "description": "a monorepo tool  inspired by lerna",
     "license": "MIT",
     "version": "0.0.1",
     "type": "library",
@@ -15,7 +15,8 @@
         "php": "^7.2|^8.0",
         "legocue/framework": "^1.1.1",
         "composer/semver": "3.x-dev",
-        "symfony/filesystem": "5.4.x-dev"
+        "symfony/filesystem": "5.4.x-dev",
+        "symfony/process": "5.4.x-dev"
     },
     "autoload": {
         "psr-4": {
