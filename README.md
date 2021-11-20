@@ -1,0 +1,1 @@
+A tool for managing php libs with multiple packages.( reference from lerna )

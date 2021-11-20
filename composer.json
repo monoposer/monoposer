@@ -1,7 +1,9 @@
 {
-    "name": "legocue/skeleton",
-    "description": "skeleton of legocue/framework , a basic applcation",
+    "name": "monoposer/framework",
+    "description": "a monorepo tool   of framework",
     "license": "MIT",
+    "version": "0.0.1",
+    "type": "library",
     "authors": [
         {
             "name": "SolaTyolo",
@@ -11,11 +13,13 @@
     "minimum-stability": "dev",
     "require": {
         "php": "^7.2|^8.0",
-        "legocue/framework": "^1.1.1"
+        "legocue/framework": "^1.1.1",
+        "composer/semver": "3.x-dev",
+        "symfony/filesystem": "5.4.x-dev"
     },
     "autoload": {
         "psr-4": {
-            "Commands\\": "Commands/"
+            "Monoposer\\": "src/"
         }
     },
     "bin": [
