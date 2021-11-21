@@ -2,7 +2,7 @@
     "name": "monoposer/monoposer",
     "description": "a monorepo tool  inspired by lerna",
     "license": "MIT",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "type": "library",
     "authors": [
         {
