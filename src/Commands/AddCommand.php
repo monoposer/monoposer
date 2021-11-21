@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Monoposer\Commands;
 
 use Monoposer\Config\PackageConfig;
+use Monoposer\Helper\PackageHelper;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -36,7 +37,7 @@ class AddCommand extends Command
 
         // check dir valid
         $dirs = (array)$input->getOption('scope');
-        $allDirs =  $this->getAllSubDirs(PackageConfig::getPackageDirPath());
+        $allDirs =  PackageHelper::getAllSubDirs( PackageConfig::getPackageDirPath() );
         if(empty($dirs)) {
             $dirs = $allDirs;
         } else {
@@ -55,19 +56,6 @@ class AddCommand extends Command
             return false;
         }
         return true;
-    }
-
-    private function getAllSubDirs( string $dirPath ): array {
-        if( !is_dir($dirPath) ) {
-            return []; 
-        } 
-        $arr = [];
-        foreach ( scandir($dirPath) as $v ) {
-            if( $v != '.' && $v != '..' ) {
-                $arr[] = $v;
-            }
-        }
-        return $arr;
     }
 
     /**

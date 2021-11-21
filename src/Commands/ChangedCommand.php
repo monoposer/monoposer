@@ -16,7 +16,7 @@ class ChangedCommand extends Command
     // The configure() method is called automatically at the end of the command constructor. 
     protected function configure()
     {
-        $this->setDescription('hello demo')
+        $this->setDescription('List local packages that have changed since the last tagged release')
             ->setHelp('This Command allows you to create a user ...');
     }
 
