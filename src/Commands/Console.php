@@ -12,6 +12,7 @@ use Monoposer\Commands\DiffCommand;
 use Monoposer\Commands\InitCommand;
 use Monoposer\Commands\ListCommand;
 use Monoposer\Commands\VersionCommand;
+use Monoposer\Commands\SplitCommand;
 use LegoCue\Framework\Kernel;
 
 class Console extends Kernel
@@ -25,6 +26,7 @@ class Console extends Kernel
         DiffCommand::class,
         InitCommand::class,
         ListCommand::class,
-        VersionCommand::class
+        VersionCommand::class,
+        SplitCommand::class,
     ];
 }

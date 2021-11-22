@@ -69,7 +69,7 @@ class AddCommand extends Command
 
         foreach ($dirs as  $dir) {
             $path = PackageConfig::getPackageDirPath() . '/' . $dir; //TODO
-            exec( `cd  ${path} && composer ` . $isDev ? 'require-dev ' : 'require '. $pkg, $op , $result);
+            exec( `cd  ${path} && composer  ` . $isDev ? 'require-dev ' : 'require '. $pkg, $op , $result);
             if($result > 0) {
                 break;
             }

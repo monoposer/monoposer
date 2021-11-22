@@ -10,7 +10,7 @@ Class PackageConfig
     const  PACKAGE_DIR_PATH = 'packages';
 
     public static function getPackageDirPath(): string {
-        return self::ROOT_DIR . "/" . self::PACKAGE_DIR_PATH;
+        return getcwd() . "/" . self::PACKAGE_DIR_PATH;
     }
 
    

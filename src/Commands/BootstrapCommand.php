@@ -31,9 +31,9 @@ class BootstrapCommand extends Command
         $isDev = $input->getOption('production') ? true : false;
 
         $allDirs =  PackageHelper::getAllSubDirs(PackageConfig::getPackageDirPath());
+        $path = PackageConfig::getPackageDirPath();
         foreach ($allDirs as  $dir) {
-            $path = PackageConfig::getPackageDirPath() . '/' . $dir;
-            exec(`cd  ${path} && composer install ` . $isDev ? ' ' : '--no-dev ', $op,  $result);
+            exec(`cd  ${path}/${dir} && composer install  ` . $isDev ? ' ' : '--no-dev ', $op,  $result);
             if ($result > 0) {
                 $output->writeln(`${dir} install dependency fail`);
                 $output->writeln($op);
